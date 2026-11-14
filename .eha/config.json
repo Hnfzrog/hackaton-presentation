@@ -1,0 +1,10 @@
+{
+  "configVersion": 2,
+  "agent": "gemini",
+  "agents": [
+    "gemini",
+    "claude",
+    "copilot"
+  ],
+  "subagentRouting": false
+}
