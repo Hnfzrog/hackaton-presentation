@@ -284,7 +284,7 @@ kbd{
 #progress i{
   display:block;
   height:100%;
-  width:5.56%;
+  width:7.69%;
   background:linear-gradient(90deg,var(--blue),var(--purple));
   box-shadow:0 0 14px rgba(10,132,255,.65);
   transition:width .55s var(--ease);
@@ -1724,155 +1724,11 @@ code{font-size:.92em}
         </div>
       </section>
 
-      <!-- ===================== 9 · MVP SCOPE ===================== -->
-      <section class="slide" data-title="Fitur MVP">
-        <div class="slide-head">
-          <div>
-            <div class="kicker reveal">07 — MVP Scope</div>
-            <h2 class="title reveal">Cakupan MVP prototype.</h2>
-            <p class="lead reveal">Prioritas demo hackathon, fitur tambahan bila waktu cukup, dan batas yang jelas.</p>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="diff-grid">
-            <article class="diff glass reveal">
-              <span class="dnum">Prioritas Wajib</span>
-              <h3>Harus ada saat demo</h3>
-              <ul class="role-list">
-                <li>Login demo &amp; pemilihan role</li>
-                <li>User dashboard &amp; form buat laporan</li>
-                <li>Daftar &amp; detail tiket</li>
-                <li>Automatic assignment sederhana</li>
-                <li>Developer dashboard &amp; update status</li>
-                <li>Admin dashboard seluruh tiket</li>
-                <li>Data demo via <code>localStorage</code> &amp; responsive</li>
-                <li>Production build berhasil</li>
-              </ul>
-            </article>
-            <article class="diff glass reveal">
-              <span class="dnum">Tambahan</span>
-              <h3>Jika waktu mencukupi</h3>
-              <ul class="role-list">
-                <li>Embedded Report Issue (simulasi Examination)</li>
-                <li>Routing Rules Management</li>
-                <li>Notification Center</li>
-                <li>Audit Log</li>
-                <li>Grafik statistik sederhana</li>
-                <li>Upload lampiran dengan validasi dasar</li>
-              </ul>
-            </article>
-            <article class="diff glass reveal">
-              <span class="dnum">Di Luar Cakupan</span>
-              <h3>Bukan untuk prototype</h3>
-              <ul class="role-list">
-                <li>Integrasi UII SSO sebenarnya</li>
-                <li>Backend &amp; database internal UII</li>
-                <li>Integrasi production ke semua aplikasi</li>
-                <li>Email / notifikasi real-time</li>
-                <li>Engine assignment kompleks</li>
-                <li>SLA &amp; analytics lanjutan</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== 10 · TECH STACK ===================== -->
-      <section class="slide" data-title="Teknologi">
-        <div class="slide-head">
-          <div>
-            <div class="kicker reveal">08 — Stack</div>
-            <h2 class="title reveal">Stack prototype cepat.</h2>
-            <p class="lead reveal">Frontend-first, tanpa backend atau konfigurasi environment eksternal — cukup dibuka dan didemokan.</p>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="tech-grid">
-            <article class="tech glass reveal"><span class="tech-k">Framework</span><h3>Next.js + React</h3><p>TypeScript, siap deploy.</p></article>
-            <article class="tech glass reveal"><span class="tech-k">Styling</span><h3>Tailwind CSS</h3><p>Utility-first, konsisten &amp; cepat.</p></article>
-            <article class="tech glass reveal"><span class="tech-k">UI Kit</span><h3>shadcn/ui</h3><p>Komponen reusable sejenis.</p></article>
-            <article class="tech glass reveal"><span class="tech-k">Icons</span><h3>Lucide React</h3><p>Ikon ringan dan konsisten.</p></article>
-            <article class="tech glass reveal"><span class="tech-k">Storage</span><h3>localStorage</h3><p>Data demo bertahan setelah refresh.</p></article>
-            <article class="tech glass reveal"><span class="tech-k">Deploy</span><h3>Vercel</h3><p>Publikasi cepat &amp; mudah.</p></article>
-          </div>
-          <div class="standards reveal">
-            <b>Prinsip</b>
-            <em>Tanpa backend</em>
-            <em>Tanpa env var eksternal</em>
-            <em>Data dummy realistis</em>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== 11 · UI/UX ===================== -->
-      <section class="slide" data-title="UI/UX">
-        <div class="slide-head">
-          <div>
-            <div class="kicker reveal">09 — UI/UX</div>
-            <h2 class="title reveal">Enterprise, clean, jelas.</h2>
-            <p class="lead reveal">Tampilan produk mengikuti gaya sistem informasi institusi pendidikan — navy, light, dan mudah dipahami.</p>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="gov-grid">
-            <div class="gov-table glass reveal">
-              <div class="gov-row"><span class="gov-k">Gaya</span><span class="gov-v">Professional enterprise dashboard; modern, clean, minimal.</span></div>
-              <div class="gov-row"><span class="gov-k">Layout</span><span class="gov-v">Sidebar navy, konten putih / light gray, card sederhana.</span></div>
-              <div class="gov-row"><span class="gov-k">Komponen</span><span class="gov-v">Tabel rapi dan status badge yang jelas.</span></div>
-              <div class="gov-row"><span class="gov-k">Responsif</span><span class="gov-v">Desktop, tablet, dan mobile.</span></div>
-              <div class="gov-row"><span class="gov-k">Bahasa</span><span class="gov-v">Bahasa antarmuka: Indonesia.</span></div>
-            </div>
-            <aside class="principles glass reveal">
-              <h3>Palet Warna Acuan</h3>
-              <div class="swatch-grid">
-                <div class="swatch"><i style="--sw:#142B4A"></i><span>Primary Navy</span><code>#142B4A</code></div>
-                <div class="swatch"><i style="--sw:#2563EB"></i><span>Primary Blue</span><code>#2563EB</code></div>
-                <div class="swatch"><i style="--sw:#EFF6FF"></i><span>Light Blue</span><code>#EFF6FF</code></div>
-                <div class="swatch"><i style="--sw:#F8FAFC"></i><span>Background</span><code>#F8FAFC</code></div>
-                <div class="swatch"><i style="--sw:#FFFFFF"></i><span>Surface</span><code>#FFFFFF</code></div>
-                <div class="swatch"><i style="--sw:#E2E8F0"></i><span>Border</span><code>#E2E8F0</code></div>
-                <div class="swatch"><i style="--sw:#1E293B"></i><span>Text Primary</span><code>#1E293B</code></div>
-                <div class="swatch"><i style="--sw:#64748B"></i><span>Text Secondary</span><code>#64748B</code></div>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== 12 · DATA MODEL ===================== -->
-      <section class="slide" data-title="Data &amp; Entitas">
-        <div class="slide-head">
-          <div>
-            <div class="kicker reveal">10 — Data Model</div>
-            <h2 class="title reveal">Entitas data konseptual.</h2>
-            <p class="lead reveal">Tiga belas entitas disiapkan untuk pengembangan; prototype menyimpannya di mock / <code>localStorage</code>.</p>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="entity-grid reveal">
-            <span class="entity">users</span>
-            <span class="entity">applications</span>
-            <span class="entity">teams</span>
-            <span class="entity">team_members</span>
-            <span class="entity">categories</span>
-            <span class="entity">routing_rules</span>
-            <span class="entity">tickets</span>
-            <span class="entity">ticket_assignments</span>
-            <span class="entity">ticket_comments</span>
-            <span class="entity">ticket_attachments</span>
-            <span class="entity">ticket_status_histories</span>
-            <span class="entity">notifications</span>
-            <span class="entity">audit_logs</span>
-          </div>
-          <p class="flow-note reveal"><b>Production:</b> pindahkan ke backend &amp; database relational dengan kontrol akses server-side.</p>
-        </div>
-      </section>
-
-      <!-- ===================== 13 · SECURITY ===================== -->
+      <!-- ===================== 9 · SECURITY ===================== -->
       <section class="slide" data-title="Keamanan">
         <div class="slide-head">
           <div>
-            <div class="kicker reveal">11 — Security</div>
+            <div class="kicker reveal">07 — Security</div>
             <h2 class="title reveal">Keamanan &amp; governance<br>untuk production.</h2>
             <p class="lead reveal">Prototype membatasi akses di sisi demo; production menerapkan kontrol di sisi server.</p>
           </div>
@@ -1899,11 +1755,11 @@ code{font-size:.92em}
         </div>
       </section>
 
-      <!-- ===================== 14 · DEMO E2E ===================== -->
+      <!-- ===================== 10 · DEMO E2E ===================== -->
       <section class="slide" data-title="Demo E2E">
         <div class="slide-head">
           <div>
-            <div class="kicker reveal">12 — Demo</div>
+            <div class="kicker reveal">08 — Demo</div>
             <h2 class="title reveal">Skenario demo end-to-end.</h2>
             <p class="lead reveal">Lima alur yang dibuktikan saat demo.</p>
           </div>
@@ -1919,11 +1775,11 @@ code{font-size:.92em}
         </div>
       </section>
 
-      <!-- ===================== 15 · SCOPE & ROADMAP ===================== -->
+      <!-- ===================== 11 · SCOPE & ROADMAP ===================== -->
       <section class="slide" data-title="Batasan &amp; Rencana">
         <div class="slide-head">
           <div>
-            <div class="kicker reveal">13 — Scope &amp; Roadmap</div>
+            <div class="kicker reveal">09 — Scope &amp; Roadmap</div>
             <h2 class="title reveal">Batasan prototype<br>&amp; rencana production.</h2>
             <p class="lead reveal">Prototype membuktikan alur produk &amp; interaksi utama — bukan kesiapan production.</p>
           </div>
@@ -1948,35 +1804,7 @@ code{font-size:.92em}
         </div>
       </section>
 
-      <!-- ===================== 16 · SUCCESS METRICS ===================== -->
-      <section class="slide" data-title="Indikator">
-        <div class="slide-head">
-          <div>
-            <div class="kicker reveal">14 — Success Metrics</div>
-            <h2 class="title reveal">Indikator keberhasilan demo.</h2>
-            <p class="lead reveal">Prototype dianggap berhasil jika sepuluh kriteria berikut terpenuhi.</p>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="check-grid reveal">
-            <div class="check-item"><i></i>Ketiga role dapat dicoba</div>
-            <div class="check-item"><i></i>User dapat membuat tiket</div>
-            <div class="check-item"><i></i>Nomor tiket terbentuk otomatis</div>
-            <div class="check-item"><i></i>Aplikasi asal tercatat</div>
-            <div class="check-item"><i></i>Assignment menghasilkan tim &amp; developer</div>
-            <div class="check-item"><i></i>Developer update status &amp; komentar</div>
-            <div class="check-item"><i></i>User melihat status &amp; timeline</div>
-            <div class="check-item"><i></i>Admin melihat seluruh tiket</div>
-            <div class="check-item"><i></i>Data demo bertahan setelah refresh</div>
-            <div class="check-item"><i></i>Build sukses &amp; akses via Vercel</div>
-          </div>
-          <div class="rootcause ok reveal">
-            <b>Ringkasan:</b> UII Application Support adalah platform ticketing terpusat yang menghubungkan pengguna aplikasi internal UII dengan tim developer melalui pelaporan terstruktur, automatic ticket assignment, dan pemantauan penyelesaian masalah secara transparan.
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== 17 · THANKS ===================== -->
+      <!-- ===================== 12 · THANKS ===================== -->
       <section class="slide center" data-title="Thanks">
         <div class="center-wrap">
           <div class="kicker reveal">Closing</div>
@@ -1986,7 +1814,7 @@ code{font-size:.92em}
         </div>
       </section>
 
-      <!-- ===================== 18 · Q&A ===================== -->
+      <!-- ===================== 13 · Q&A ===================== -->
       <section class="slide center" data-title="Q&amp;A">
         <div class="center-wrap">
           <div class="kicker reveal">Q &amp; A</div>
@@ -2009,7 +1837,7 @@ code{font-size:.92em}
       <span class="hud-brand"><b>UII SUPPORT</b> · NOER MAHA OKE</span>
       <div class="dots" id="dots"></div>
       <div class="hud-right">
-        <span class="counter" id="counter">01 / 18</span>
+        <span class="counter" id="counter">01 / 13</span>
         <button class="icon-btn" id="fsBtn" type="button" title="Fullscreen (F)" aria-label="Toggle fullscreen">
           <svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
         </button>
