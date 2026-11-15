@@ -4,14 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="dark" />
-<title>DEVTRACE AI — Tim Noer Maha Oke</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230A84FF'/%3E%3Cstop offset='1' stop-color='%23BF5AF2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2305070D'/%3E%3Cpath d='M32 12 40 32 32 52 24 32Z' fill='url(%23g)'/%3E%3C/svg%3E" />
+<title>UII Application Support — Tim Noer Maha Oke</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232563EB'/%3E%3Cstop offset='1' stop-color='%23BF5AF2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2305070D'/%3E%3Cpath d='M13 21h38v7a6 6 0 0 0 0 12v7H13v-7a6 6 0 0 0 0-12z' fill='url(%23g)'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   DEVTRACE AI — Hackathon Deck
+   UII Application Support — Hackathon Deck
    Single-file 16:9 presentation · glassy iOS · monospace
    ============================================================ */
 
@@ -284,7 +284,7 @@ kbd{
 #progress i{
   display:block;
   height:100%;
-  width:6.67%;
+  width:5.56%;
   background:linear-gradient(90deg,var(--blue),var(--purple));
   box-shadow:0 0 14px rgba(10,132,255,.65);
   transition:width .55s var(--ease);
@@ -492,7 +492,7 @@ kbd{
    ============================================================ */
 .member-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:20px;
   margin-top:6px;
 }
@@ -635,7 +635,7 @@ kbd{
   gap:12px;
   transition:transform .45s var(--ease), border-color .45s ease;
 }
-.pillar:nth-child(4),.pillar:nth-child(5){grid-column:span 3}
+.pillar:nth-child(6) .ico{background:rgba(100,116,139,.14);border-color:rgba(148,163,184,.26);color:#CBD5E1}
 .pillar:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.24)}
 .pillar .ico{
   width:40px;height:40px;
@@ -1166,6 +1166,48 @@ kbd{
 }
 
 /* ============================================================
+   TICKETING PATTERNS
+   ============================================================ */
+/* role / MVP lists inside .diff */
+.role-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.role-list li{position:relative;padding-left:16px;font-size:13px;line-height:1.45;color:var(--muted)}
+.role-list li::before{content:"";position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+
+/* tech grid */
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tech{padding:22px 24px;display:flex;flex-direction:column;gap:8px;min-height:130px;transition:transform .45s var(--ease),border-color .45s ease}
+.tech:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.24)}
+.tech-k{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#8FC7FF}
+.tech h3{font-size:18px;letter-spacing:-.02em}
+.tech p{font-size:13px;line-height:1.5;color:var(--muted)}
+
+/* colour swatches */
+.swatch-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;margin-top:14px}
+.swatch{display:flex;flex-direction:column;gap:4px;font-size:11.5px}
+.swatch i{display:block;height:26px;border-radius:8px;background:var(--sw);border:1px solid rgba(255,255,255,.16)}
+.swatch span{color:var(--muted)}
+.swatch code{font-size:10.5px;align-self:flex-start;padding:1px 5px}
+
+/* entity chips */
+.entity-grid{display:flex;flex-wrap:wrap;gap:10px;align-content:center;justify-content:center;padding:8px 0}
+.entity{font-size:13px;padding:9px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(236,242,252,.85)}
+.entity:nth-child(3n+1){border-color:rgba(10,132,255,.28);background:rgba(10,132,255,.08)}
+.entity:nth-child(3n+2){border-color:rgba(191,90,242,.26);background:rgba(191,90,242,.07)}
+.entity:nth-child(3n){border-color:rgba(48,209,88,.26);background:rgba(48,209,88,.07)}
+
+/* checklist */
+.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 26px}
+.check-item{display:flex;align-items:flex-start;gap:12px;font-size:14px;line-height:1.5;color:rgba(236,242,252,.86);padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03)}
+.check-item i{flex:0 0 auto;width:18px;height:18px;border-radius:50%;margin-top:1px;background:rgba(48,209,88,.16);border:1px solid rgba(48,209,88,.4);position:relative}
+.check-item i::after{content:"";position:absolute;left:5px;top:2px;width:5px;height:9px;border:solid #8FE3A6;border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+/* green summary box */
+.rootcause.ok{background:rgba(48,209,88,.075);border-color:rgba(48,209,88,.22);border-left-color:var(--mint);color:#DFF7E6}
+
+/* left-aligned impact table */
+.impact-table.left th:not(:first-child),.impact-table.left td:not(:first-child){text-align:left}
+
+/* ============================================================
    REDUCED MOTION
    ============================================================ */
 @media (prefers-reduced-motion: reduce){
@@ -1211,7 +1253,7 @@ code{font-size:.92em}
   gap:clamp(28px,4vw,72px);
   padding:clamp(30px,4.5vh,60px) clamp(28px,5.5vw,88px) clamp(40px,5vh,72px);
 }
-.cover h1{font-size:clamp(52px,6.5vw,124px)}
+.cover h1{font-size:clamp(40px,4.6vw,84px);line-height:1.02}
 .cover-sub{font-size:clamp(15px,1.2vw,21px);margin-top:clamp(14px,2.6vh,26px)}
 .tagline{font-size:clamp(13px,1.03vw,18px);margin-top:clamp(16px,3vh,30px)}
 .cover-chips{margin-top:clamp(16px,3vh,30px);gap:clamp(8px,0.7vw,12px)}
@@ -1347,6 +1389,22 @@ code{font-size:.92em}
 .center-sub{font-size:clamp(16px,1.4vw,24px);margin-top:clamp(16px,2.8vh,26px)}
 .center-meta{font-size:clamp(10.5px,0.78vw,13px);margin-top:clamp(26px,4.6vh,44px)}
 .qa-caret{width:.45em;height:.88em}
+
+/* ticketing patterns — responsive */
+.role-list li{font-size:clamp(11.5px,0.82vw,13.5px)}
+.tech-grid{gap:clamp(12px,1.15vw,20px)}
+.tech{padding:clamp(15px,1.5vw,24px);min-height:clamp(100px,15vh,150px)}
+.tech-k{font-size:clamp(9.5px,0.68vw,11px)}
+.tech h3{font-size:clamp(14.5px,1.15vw,19px)}
+.tech p{font-size:clamp(11.5px,0.82vw,14px)}
+.swatch-grid{gap:clamp(8px,0.9vw,14px) clamp(10px,1.2vw,16px);margin-top:clamp(8px,1.4vh,14px)}
+.swatch i{height:clamp(18px,2.2vh,28px)}
+.swatch{font-size:clamp(10px,0.72vw,12px)}
+.swatch code{font-size:clamp(9.5px,0.66vw,11px)}
+.entity{font-size:clamp(11.5px,0.82vw,14px);padding:clamp(7px,0.8vw,10px) clamp(11px,0.9vw,15px)}
+.check-grid{gap:clamp(8px,1vw,14px) clamp(14px,1.8vw,28px)}
+.check-item{font-size:clamp(12px,0.85vw,15px);padding:clamp(7px,1.1vh,12px) clamp(11px,1vw,15px);gap:clamp(9px,0.9vw,12px)}
+.check-item i{width:clamp(15px,1.15vw,18px);height:clamp(15px,1.15vw,18px)}
 </style>
 </head>
 <body>
@@ -1363,19 +1421,18 @@ code{font-size:.92em}
     </div>
 
     <main id="deck">
-
       <!-- ===================== 1 · COVER ===================== -->
       <section class="slide cover active" data-title="Cover">
         <div class="cover-wrap">
           <div class="cover-copy">
             <div class="kicker reveal">Hackathon · Tim Noer Maha Oke</div>
-            <h1 class="reveal">DEVTRACE<span class="grad"> AI</span></h1>
-            <p class="cover-sub reveal">AI-Powered Application Error<br>Intelligence &amp; Resolution Platform</p>
-            <p class="tagline reveal"><span class="type" data-text="See the Error. Understand the Cause. Fix It Smarter." data-speed="24"></span></p>
+            <h1 class="reveal">UII<br><span class="grad">Application<br>Support</span></h1>
+            <p class="cover-sub reveal">Platform ticketing terpusat untuk melaporkan, mengelola, dan memantau kendala pada aplikasi internal Universitas Islam Indonesia.</p>
+            <p class="tagline reveal"><span class="type" data-text="Lapor Cepat. Terdistribusi Otomatis. Progres Transparan." data-speed="24"></span></p>
             <div class="cover-chips reveal">
-              <span class="chip"><b>Chrome Extension</b> monitoring</span>
-              <span class="chip"><b>AI</b> diagnosis</span>
-              <span class="chip"><b>Human</b> in control</span>
+              <span class="chip"><b>Embedded</b> Report Issue</span>
+              <span class="chip"><b>Standalone</b> Dashboard</span>
+              <span class="chip"><b>Auto</b> Assignment</span>
             </div>
             <div class="hint reveal"><kbd>→</kbd> mulai <span>·</span> <kbd>F</kbd> fullscreen</div>
           </div>
@@ -1385,17 +1442,17 @@ code{font-size:.92em}
               <i class="tdot" style="--c:#FF453A"></i>
               <i class="tdot" style="--c:#FF9F0A"></i>
               <i class="tdot" style="--c:#30D158"></i>
-              <span class="term-title">console — app.checkout</span>
+              <span class="term-title">ticket — UII-2026-0001</span>
             </div>
             <div class="term-body">
-              <div class="tline"><span class="t-time">14:02:11</span><span class="t-err">ERROR</span><span>POST /api/orders → <em>500</em></span></div>
-              <div class="tline"><span class="t-time">14:02:11</span><span class="t-warn">WARN</span><span>Unhandled TypeError: cannot read 'id'</span></div>
-              <div class="tline"><span class="t-time">14:02:12</span><span class="t-info">TRACE</span><span>trace_id = 7f3a-91c2</span></div>
+              <div class="tline"><span class="t-time">09:14:02</span><span class="t-info">REPORT</span><span>User · Examination · Bug / Error</span></div>
+              <div class="tline"><span class="t-time">09:14:02</span><span class="t-info">CREATE</span><span>nomor tiket UII-2026-0001</span></div>
+              <div class="tline"><span class="t-time">09:14:03</span><span class="t-sys">ROUTE</span><span>Examination → Examination Development</span></div>
               <div class="t-sep"></div>
-              <div class="tline t-ok"><span class="t-time">14:02:13</span><span class="t-sys">CORRELATE</span><span>3 frontend events + 1 backend exception</span></div>
-              <div class="tline t-ok"><span class="t-time">14:02:14</span><span class="t-sys">ROOT</span><span>null reference · OrderMapper.toDto()</span></div>
-              <div class="tline t-ok"><span class="t-time">14:02:14</span><span class="t-sys">CONF</span><span>87% · 5 evidence items</span></div>
-              <div class="tline t-pending"><span class="t-time">14:02:14</span><span class="t-sys">FIX</span><span>recommendation ready — awaiting review</span></div>
+              <div class="tline t-ok"><span class="t-time">09:14:03</span><span class="t-sys">ASSIGN</span><span>developer dengan tiket aktif paling sedikit</span></div>
+              <div class="tline"><span class="t-time">09:20:41</span><span class="t-warn">STATUS</span><span>IN PROGRESS</span></div>
+              <div class="tline"><span class="t-time">10:02:18</span><span class="t-warn">COMMENT</span><span>developer: "sedang diperbaiki"</span></div>
+              <div class="tline t-ok"><span class="t-time">10:47:09</span><span class="t-sys">RESOLVED</span><span>menunggu konfirmasi pelapor</span></div>
               <div class="tline"><span class="t-caret">▊</span></div>
             </div>
           </div>
@@ -1408,7 +1465,7 @@ code{font-size:.92em}
           <div>
             <div class="kicker reveal">Team</div>
             <h2 class="title reveal">Noer Maha Oke</h2>
-            <p class="lead reveal">Empat peran, satu alur: dari membaca error sampai memastikan perbaikannya.</p>
+            <p class="lead reveal">Tiga peran, satu alur: dari laporan masuk sampai tiket selesai dikonfirmasi.</p>
           </div>
           <span class="chip purple reveal">Hackathon 2026</span>
         </div>
@@ -1416,26 +1473,20 @@ code{font-size:.92em}
           <div class="member-grid">
             <article class="member glass reveal">
               <div class="avatar">01</div>
-              <h3>[Nama 1]</h3>
-              <p>[Peran 1]</p>
+              <h3>Muhammad Noer Ramadhan, S.Kom.</h3>
+              
             </article>
             <article class="member glass reveal">
               <div class="avatar">02</div>
-              <h3>[Nama 2]</h3>
-              <p>[Peran 2]</p>
+              <h3>Febrian Aji Kusuma, S.Kom.</h3>
+              
             </article>
             <article class="member glass reveal">
               <div class="avatar">03</div>
-              <h3>[Nama 3]</h3>
-              <p>[Peran 3]</p>
-            </article>
-            <article class="member glass reveal">
-              <div class="avatar">04</div>
-              <h3>[Nama 4]</h3>
-              <p>[Peran 4]</p>
+              <h3>Hanif Abdillah Kuswanto</h3>
+              
             </article>
           </div>
-          <p class="hint-line reveal">Ganti placeholder di <code>index.html</code> — cari <code>[Nama 1]</code> sampai <code>[Nama 4]</code>.</p>
         </div>
       </section>
 
@@ -1444,455 +1495,506 @@ code{font-size:.92em}
         <div class="slide-head">
           <div>
             <div class="kicker reveal">01 — Problem</div>
-            <h2 class="title reveal">Error tersebar. Diagnosis masih manual.</h2>
-            <p class="lead reveal">Error bisa terjadi di frontend maupun backend — tapi identifikasi dan penyelesaiannya sering berjalan terpisah.</p>
+            <h2 class="title reveal">Laporan tersebar.<br>Penanganan tak terlacak.</h2>
+            <p class="lead reveal">Kendala pada aplikasi internal UII dilaporkan lewat banyak kanal, lalu didistribusikan manual tanpa pusat pelacakan.</p>
           </div>
         </div>
         <div class="slide-body">
           <div class="problem-grid">
             <article class="pcard glass reveal">
               <div class="pcard-top"><span class="num">01</span><span class="tag">Fragmented</span></div>
-              <h3>Informasi error tersebar</h3>
-              <p>Console, Network tab, API response, dan backend logs: empat sumber, empat jendela.</p>
+              <h3>Laporan tersebar</h3>
+              <p>Gangguan dilaporkan lewat chat, email, lisan, dan tiket yang tidak tercatat.</p>
             </article>
             <article class="pcard glass reveal">
-              <div class="pcard-top"><span class="num">02</span><span class="tag">Manual</span></div>
-              <h3>Root cause dianalisis manual</h3>
-              <p>Developer mencocokkan error antar lapisan satu per satu, tanpa korelasi otomatis.</p>
+              <div class="pcard-top"><span class="num">02</span><span class="tag">Inconsistent</span></div>
+              <h3>Informasi tidak seragam</h3>
+              <p>Format laporan berbeda-beda dan sering kurang lengkap untuk ditindaklanjuti.</p>
             </article>
             <article class="pcard glass reveal">
-              <div class="pcard-top"><span class="num">03</span><span class="tag">Slow</span></div>
-              <h3>Investigasi memakan waktu</h3>
-              <p>Terutama saat error frontend ternyata hanya gejala dari masalah di backend.</p>
+              <div class="pcard-top"><span class="num">03</span><span class="tag">Manual</span></div>
+              <h3>Distribusi manual</h3>
+              <p>Laporan diteruskan ke tim developer secara manual dan rawan terlewat.</p>
             </article>
             <article class="pcard glass reveal">
-              <div class="pcard-top"><span class="num">04</span><span class="tag">Recurring</span></div>
-              <h3>Error yang sama berulang</h3>
-              <p>Tanpa dokumentasi dan rekomendasi pencegahan yang terstruktur.</p>
+              <div class="pcard-top"><span class="num">04</span><span class="tag">Opacity</span></div>
+              <h3>Progres tak terlihat</h3>
+              <p>Pengguna sulit tahu siapa yang menangani dan sejauh mana progresnya.</p>
             </article>
             <article class="pcard glass reveal">
-              <div class="pcard-top"><span class="num">05</span><span class="tag">Shallow</span></div>
-              <h3>Insight minim arahan</h3>
-              <p>Monitoring konvensional menampilkan error — belum tentu memberi arah perbaikan.</p>
+              <div class="pcard-top"><span class="num">05</span><span class="tag">Siloed</span></div>
+              <h3>Riwayat tidak terpusat</h3>
+              <p>Riwayat komunikasi dan penyelesaian masalah belum terkumpul di satu tempat.</p>
             </article>
             <article class="pcard glass core reveal">
               <div class="pcard-top"><span class="num">CORE</span><span class="tag">Inti masalah</span></div>
-              <h3>Belum terintegrasi</h3>
-              <p>Pengumpulan, korelasi, analisis, dan penyelesaian error belum berjalan dalam satu alur yang cerdas.</p>
+              <h3>Belum terpusat</h3>
+              <p>Pelaporan, distribusi, penanganan, dan pelacakan belum berjalan dalam satu sistem.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ===================== 4 · CURRENT PROCESS ===================== -->
-      <section class="slide" data-title="Current Process">
-        <div class="slide-head">
-          <div>
-            <div class="kicker reveal">02 — Current Process</div>
-            <h2 class="title reveal">Tujuh langkah. Empat tools.<br>Satu developer.</h2>
-            <p class="lead reveal">Alur debugging hari ini mengandalkan ingatan, pengalaman, dan perpindahan konteks antar tools.</p>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="timeline">
-            <div class="tstep reveal"><span class="tnum">01</span><p>Pengguna menemukan error</p></div>
-            <div class="tstep reveal"><span class="tnum">02</span><p>Buka browser console</p></div>
-            <div class="tstep reveal"><span class="tnum">03</span><p>Periksa Network tab</p></div>
-            <div class="tstep reveal"><span class="tnum">04</span><p>Tanya tim backend</p></div>
-            <div class="tstep reveal"><span class="tnum">05</span><p>Cocokkan sumber manual</p></div>
-            <div class="tstep reveal"><span class="tnum">06</span><p>Cari solusi sendiri</p></div>
-            <div class="tstep reveal"><span class="tnum">07</span><p>Perbaiki &amp; uji ulang</p></div>
-          </div>
-          <div class="limits-block reveal">
-            <div class="limits-title">Keterbatasan proses saat ini</div>
-            <div class="limits">
-              <span class="chip red">FE &amp; BE tidak terhubung</span>
-              <span class="chip">Bergantung pengalaman developer</span>
-              <span class="chip">Dokumentasi tidak konsisten</span>
-              <span class="chip">Rekomendasi dicari manual</span>
-              <span class="chip">Pola error berulang tak terlihat</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== 5 · SOLUTION ===================== -->
+      <!-- ===================== 4 · SOLUTION ===================== -->
       <section class="slide" data-title="Solution">
         <div class="slide-head">
           <div>
-            <div class="kicker reveal">03 — Solution</div>
-            <h2 class="title reveal">Satu platform. Satu alur.<br>Dari error ke perbaikan.</h2>
-            <p class="lead reveal">Browser monitoring, backend error collection, dan AI — disatukan dalam alur yang bisa ditindaklanjuti.</p>
+            <div class="kicker reveal">02 — Solution</div>
+            <h2 class="title reveal">Satu platform.<br>Satu alur penanganan.</h2>
+            <p class="lead reveal">Form terstruktur, routing otomatis ke developer, dan pemantauan penyelesaian yang transparan.</p>
           </div>
         </div>
         <div class="slide-body">
           <div class="pillars">
             <article class="pillar glass reveal">
-              <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-              <h3>Automated Browser Monitoring</h3>
-              <p>Console errors, JS exceptions, HTTP request/response, dan network failure ditangkap otomatis lewat Chrome Extension.</p>
+              <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 3z"/></svg></div>
+              <h3>Form Pelaporan Terstruktur</h3>
+              <p>Aplikasi asal, kategori, prioritas, deskripsi, dan lampiran opsional dalam satu form baku.</p>
             </article>
             <article class="pillar glass reveal">
-              <div class="ico"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg></div>
-              <h3>Frontend &amp; Backend Correlation</h3>
-              <p>Error frontend dan backend dihubungkan lewat Trace ID / Request ID — satu kejadian, satu cerita.</p>
+              <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg></div>
+              <h3>Nomor Tiket Otomatis</h3>
+              <p>Setiap laporan mendapat nomor unik, misalnya <code>UII-2026-0001</code>.</p>
             </article>
             <article class="pillar glass reveal">
-              <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/></svg></div>
-              <h3>AI Root Cause Analysis</h3>
-              <p>Akar masalah, kategori error, dan bukti pendukung — bukan tebakan tanpa dasar.</p>
+              <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><circle cx="12" cy="12" r="2.4"/></svg></div>
+              <h3>Automatic Assignment</h3>
+              <p>Routing rules mencocokkan aplikasi &amp; kategori ke tim, lalu developer dengan beban paling ringan.</p>
             </article>
             <article class="pillar glass reveal">
-              <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></svg></div>
-              <h3>AI Code Recommendation</h3>
-              <p>Rekomendasi perbaikan kode, contoh implementasi, dan langkah pencegahan agar error tidak terulang.</p>
+              <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.6"/></svg></div>
+              <h3>Dashboard per Role</h3>
+              <p>Tampilan berbeda untuk User, Developer, dan Administrator sesuai kewenangannya.</p>
             </article>
             <article class="pillar glass reveal">
-              <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
-              <h3>Centralized Dashboard</h3>
-              <p>Statistik error, riwayat kejadian, analisis AI, dan status penyelesaian di satu tempat.</p>
+              <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+              <h3>Status, Timeline &amp; Diskusi</h3>
+              <p>Pelapor dan developer berkomunikasi; setiap perubahan status tercatat di timeline.</p>
+            </article>
+            <article class="pillar glass reveal">
+              <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 11l2 2 4-4"/><path d="M4 6v14h16V6"/><path d="M4 6l8-3 8 3"/></svg></div>
+              <h3>Monitoring, Audit &amp; Riwayat</h3>
+              <p>Administrator memantau seluruh tiket dan aktivitas sistem lewat audit log.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ===================== 6 · FLOW ===================== -->
-      <section class="slide" data-title="Arsitektur">
+      <!-- ===================== 5 · USERS & ACCESS ===================== -->
+      <section class="slide" data-title="Pengguna &amp; Akses">
         <div class="slide-head">
           <div>
-            <div class="kicker reveal">Architecture</div>
-            <h2 class="title reveal">Empat tahap menuju perbaikan.</h2>
-            <p class="lead reveal">Dari event mentah di browser hingga keputusan developer yang terdokumentasi.</p>
+            <div class="kicker reveal">03 — Users &amp; Access</div>
+            <h2 class="title reveal">Tiga role.<br>Hak akses yang jelas.</h2>
+            <p class="lead reveal">Setiap pengguna melihat dan melakukan hanya sesuai kewenangannya.</p>
           </div>
         </div>
         <div class="slide-body">
-          <div class="flow">
-            <article class="fcard glass reveal">
-              <span class="fnum">01</span>
-              <h3>Application Monitoring</h3>
-              <p class="fsmall">Chrome Extension menangkap event browser; backend mencatat exception dan log.</p>
-              <span class="fstage">Browser + Backend</span>
+          <div class="diff-grid">
+            <article class="diff glass reveal">
+              <span class="dnum">User / Pelapor</span>
+              <h3>Melaporkan &amp; memantau</h3>
+              <ul class="role-list">
+                <li>Login lewat simulasi UII SSO</li>
+                <li>Membuat laporan kendala</li>
+                <li>Melihat daftar &amp; detail tiket miliknya</li>
+                <li>Mengirim komentar / informasi tambahan</li>
+                <li>Memantau status &amp; riwayat tiket</li>
+                <li>Konfirmasi selesai atau membuka kembali</li>
+              </ul>
             </article>
-            <div class="farrow reveal">→</div>
-            <article class="fcard glass reveal">
-              <span class="fnum">02</span>
-              <h3>Collection &amp; Correlation</h3>
-              <p class="fsmall">Collect · sanitize · normalize · correlate. Trace ID menyatukan kedua sisi.</p>
-              <span class="fstage">Trace ID / Request ID</span>
+            <article class="diff glass reveal">
+              <span class="dnum">Developer</span>
+              <h3>Menangani tiket</h3>
+              <ul class="role-list">
+                <li>Melihat tiket yang ditugaskan</li>
+                <li>Melihat detail masalah &amp; aplikasi asal</li>
+                <li>Mengubah status penanganan</li>
+                <li>Menambah komentar publik</li>
+                <li>Menambah catatan internal</li>
+                <li>Menandai tiket sebagai selesai</li>
+              </ul>
             </article>
-            <div class="farrow reveal">→</div>
-            <article class="fcard glass hl reveal">
-              <span class="fnum">03</span>
-              <h3>AI Intelligence</h3>
-              <p class="fsmall">Root cause analysis, pengelompokan error, dan rekomendasi perbaikan berbasis bukti.</p>
-              <span class="fstage">Root cause + code fix</span>
-            </article>
-            <div class="farrow reveal">→</div>
-            <article class="fcard glass reveal">
-              <span class="fnum">04</span>
-              <h3>Developer Action</h3>
-              <p class="fsmall">Review, fix, test, resolve — keputusan tetap di tangan developer.</p>
-              <span class="fstage">Human in the loop</span>
-            </article>
-          </div>
-          <p class="flow-note reveal"><b>Trace ID</b> adalah benang merah: satu request, satu cerita, frontend sampai backend.</p>
-        </div>
-      </section>
-
-      <!-- ===================== 7 · AI DIAGNOSIS ===================== -->
-      <section class="slide" data-title="AI Diagnosis">
-        <div class="slide-head">
-          <div>
-            <div class="kicker reveal">AI Intelligence</div>
-            <h2 class="title reveal">Bukan sekadar log.<br>Diagnosis berbasis bukti.</h2>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="diag-grid">
-            <article class="panel glass reveal">
-              <div class="panel-head">
-                <span class="panel-title">Diagnosis · <b>TRACE 7f3a-91c2</b></span>
-                <span class="chip mint" style="font-size:10px;padding:5px 10px">Correlated</span>
-              </div>
-              <div class="drow">
-                <span class="dk">Frontend</span>
-                <span class="dv">Unhandled <span class="accent-red">TypeError</span> — cannot read property 'id' <span class="muted">· checkout.js:214</span></span>
-              </div>
-              <div class="drow">
-                <span class="dk">Network</span>
-                <span class="dv">POST /api/orders → <span class="accent-red">500 Internal Server Error</span> <span class="muted">· 312 ms</span></span>
-              </div>
-              <div class="drow">
-                <span class="dk">Backend</span>
-                <span class="dv">NullPointerException <span class="muted">· OrderMapper.toDto() · order-service</span></span>
-              </div>
-              <div class="drow">
-                <span class="dk">Evidence</span>
-                <span class="dv">
-                  <span class="chip blue" style="font-size:10px;padding:4px 9px;text-transform:none">console</span>
-                  <span class="chip blue" style="font-size:10px;padding:4px 9px;text-transform:none">request</span>
-                  <span class="chip blue" style="font-size:10px;padding:4px 9px;text-transform:none">response</span>
-                  <span class="chip blue" style="font-size:10px;padding:4px 9px;text-transform:none">stack trace</span>
-                </span>
-              </div>
-              <div class="rootcause">
-                <b>Root cause:</b> <code>order.reference</code> null di backend saat pemetaan DTO. Error frontend hanya gejalanya.
-              </div>
-              <div class="confidence">
-                <div class="conf-top">
-                  <span class="conf-label">Confidence</span>
-                  <span class="conf-val">87%</span>
-                </div>
-                <div class="conf-track"><div class="conf-fill"></div></div>
-                <div class="conf-note">5 bukti terkorelasi · 1 backend exception · 3 frontend events</div>
-              </div>
-            </article>
-
-            <article class="panel glass reveal">
-              <div class="panel-head">
-                <span class="panel-title">Recommendation</span>
-                <span class="chip" style="font-size:10px;padding:5px 10px;color:var(--orange);border-color:rgba(255,159,10,.3)">Pending review</span>
-              </div>
-              <div class="codeblock">
-                <span class="cl cmt">// checkout.js:214</span>
-                <span class="cl del">- const refId = order.reference.id;</span>
-                <span class="cl add">+ const ref = order.reference;</span>
-                <span class="cl add">+ if (!ref) throw new ValidationError('ref missing');</span>
-                <span class="cl add">+ const refId = ref.id;</span>
-              </div>
-              <div class="prev">
-                <b>Pencegahan:</b> guard di mapper, unit test untuk null reference, dan schema validation di API boundary.
-              </div>
-              <div class="await"><span class="pulse-dot"></span> Awaiting developer approval — no auto-commit</div>
+            <article class="diff glass reveal">
+              <span class="dnum">Administrator</span>
+              <h3>Mengelola sistem</h3>
+              <ul class="role-list">
+                <li>Melihat seluruh tiket</li>
+                <li>Memantau statistik &amp; distribusi</li>
+                <li>Mengelola aplikasi, tim, developer, kategori</li>
+                <li>Mengelola routing rules</li>
+                <li>Memantau Unassigned Queue</li>
+                <li>Melihat audit log &amp; aktivitas</li>
+              </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ===================== 8 · IMPACT ===================== -->
-      <section class="slide" data-title="Impact">
+      <!-- ===================== 6 · MAIN FLOW ===================== -->
+      <section class="slide" data-title="Alur Utama">
         <div class="slide-head">
           <div>
-            <div class="kicker reveal">04 — Impact</div>
-            <h2 class="title reveal">Empat jam menjadi lima puluh menit.</h2>
+            <div class="kicker reveal">04 — Main Flow</div>
+            <h2 class="title reveal">Dari laporan masuk<br>sampai dikonfirmasi.</h2>
+            <p class="lead reveal">Alur utama sistem — dua belas langkah, diringkas menjadi tujuh tahap.</p>
           </div>
         </div>
         <div class="slide-body">
-          <div class="impact-grid">
-            <div class="reveal">
-              <div class="stat-big"><span data-count="79.2" data-decimals="1" data-suffix="%">79,2%</span></div>
-              <div class="stat-label">Pengurangan target waktu investigasi</div>
-              <div class="ba-row">
-                <div class="ba before"><span>Before</span><b>240 menit</b></div>
-                <div class="ba-arrow">→</div>
-                <div class="ba after"><span>After</span><b>50 menit</b></div>
-              </div>
-              <p class="foot">*Target ilustratif MVP berdasarkan skenario simulasi — akan divalidasi melalui pengujian, bukan hasil pengukuran final.</p>
-            </div>
-
-            <div class="impact-table glass reveal">
-              <table>
-                <thead>
-                  <tr><th>Aktivitas</th><th>Before</th><th>After</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Mengumpulkan informasi error</td><td class="b">30 mnt</td><td class="a">5 mnt</td></tr>
-                  <tr><td>Mencocokkan frontend &amp; backend</td><td class="b">60 mnt</td><td class="a">10 mnt</td></tr>
-                  <tr><td>Analisis kemungkinan penyebab</td><td class="b">90 mnt</td><td class="a">20 mnt</td></tr>
-                  <tr><td>Menyusun rekomendasi perbaikan</td><td class="b">60 mnt</td><td class="a">15 mnt</td></tr>
-                  <tr class="total"><td>Total</td><td class="b">4 jam</td><td class="a">50 mnt</td></tr>
-                </tbody>
-              </table>
+          <div class="timeline">
+            <div class="tstep reveal"><span class="tnum">01</span><p>Buka aplikasi / dashboard</p></div>
+            <div class="tstep reveal"><span class="tnum">02</span><p>Tekan <b>Report Issue</b> / <b>Buat Laporan</b></p></div>
+            <div class="tstep reveal"><span class="tnum">03</span><p>Aplikasi asal terisi otomatis (embedded)</p></div>
+            <div class="tstep reveal"><span class="tnum">04</span><p>Isi judul, kategori, prioritas, deskripsi</p></div>
+            <div class="tstep reveal"><span class="tnum">05</span><p>Nomor tiket + automatic assignment</p></div>
+            <div class="tstep reveal"><span class="tnum">06</span><p>Developer proses &amp; berkomunikasi</p></div>
+            <div class="tstep reveal"><span class="tnum">07</span><p>RESOLVED → konfirmasi / REOPENED</p></div>
+          </div>
+          <div class="limits-block reveal">
+            <div class="limits-title">Poin kunci alur</div>
+            <div class="limits">
+              <span class="chip mint">Nomor tiket otomatis</span>
+              <span class="chip mint">Assignment deterministik</span>
+              <span class="chip mint">Timeline tercatat</span>
+              <span class="chip mint">Konfirmasi pelapor</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ===================== 9 · GOVERNANCE ===================== -->
-      <section class="slide" data-title="Governance">
+      <!-- ===================== 7 · AUTOMATIC ASSIGNMENT ===================== -->
+      <section class="slide" data-title="Automatic Assignment">
         <div class="slide-head">
           <div>
-            <div class="kicker reveal">05 — Governance</div>
-            <h2 class="title reveal">AI memberi rekomendasi.<br>Manusia memutuskan.</h2>
+            <div class="kicker reveal">05 — Assignment</div>
+            <h2 class="title reveal">Automatic ticket assignment.</h2>
+            <p class="lead reveal">Aturan deterministik: cocokkan aplikasi &amp; kategori, tentukan tim, lalu pilih developer dengan beban paling ringan.</p>
           </div>
         </div>
         <div class="slide-body">
           <div class="gov-grid">
             <div class="gov-table glass reveal">
-              <div class="gov-row"><span class="gov-k">Data Ownership</span><span class="gov-v">Data monitoring milik organisasi / pemilik project.</span></div>
-              <div class="gov-row"><span class="gov-k">Access Control</span><span class="gov-v">Akses berbasis role dan hak akses project.</span></div>
-              <div class="gov-row"><span class="gov-k">Data Classification</span><span class="gov-v">Publik, internal, dan sensitif — diperlakukan berbeda.</span></div>
-              <div class="gov-row"><span class="gov-k">AI Accountability</span><span class="gov-v">Hasil AI adalah rekomendasi, bukan keputusan otomatis.</span></div>
-              <div class="gov-row"><span class="gov-k">Human Oversight</span><span class="gov-v">Developer meninjau sebelum implementasi.</span></div>
-              <div class="gov-row"><span class="gov-k">Audit Trail</span><span class="gov-v">Aktivitas user, analisis AI, dan perubahan status tercatat.</span></div>
-              <div class="gov-row"><span class="gov-k">Data Retention</span><span class="gov-v">Penyimpanan dan penghapusan sesuai kebutuhan organisasi.</span></div>
-              <div class="gov-row"><span class="gov-k">AI Transparency</span><span class="gov-v">Bukti, asumsi, dan tingkat keyakinan selalu disertakan.</span></div>
+              <div class="gov-row"><span class="gov-k">Langkah 1</span><span class="gov-v">Cocokkan aplikasi asal dan kategori dengan routing rules.</span></div>
+              <div class="gov-row"><span class="gov-k">Langkah 2</span><span class="gov-v">Tentukan tim tujuan.</span></div>
+              <div class="gov-row"><span class="gov-k">Langkah 3</span><span class="gov-v">Pilih developer aktif dalam tim tersebut.</span></div>
+              <div class="gov-row"><span class="gov-k">Langkah 4</span><span class="gov-v">Prioritaskan developer dengan jumlah tiket aktif paling sedikit.</span></div>
+              <div class="gov-row"><span class="gov-k">Langkah 5</span><span class="gov-v">Jika jumlah sama, gunakan urutan pemilihan yang konsisten.</span></div>
+              <div class="gov-row"><span class="gov-k">Langkah 6</span><span class="gov-v">Tanpa aturan / developer → <b>Unassigned Queue</b> untuk admin.</span></div>
             </div>
             <aside class="principles glass reveal">
-              <h3>Prinsip</h3>
+              <h3>Contoh Routing</h3>
               <ol>
-                <li><i>01</i><span>Tidak ada perbaikan otomatis tanpa persetujuan developer.</span></li>
-                <li><i>02</i><span>Setiap analisis tertelusur ke sumber error yang digunakan.</span></li>
-                <li><i>03</i><span>Data hanya dipakai untuk monitoring dan debugging.</span></li>
-                <li><i>04</i><span>Penggunaan AI mengikuti kebijakan organisasi.</span></li>
-                <li><i>05</i><span>Setiap rekomendasi melewati review dan testing.</span></li>
+                <li><i>AG</i><span>Academic Gateway → Academic Development</span></li>
+                <li><i>EX</i><span>Examination → Examination Development</span></li>
+                <li><i>UI</i><span>Lecture / UI → Frontend Team</span></li>
+                <li><i>BE</i><span>Service / Gangguan Sistem → Backend Team</span></li>
+                <li><i>IN</i><span>Login / Akses → Infrastructure Team</span></li>
               </ol>
             </aside>
           </div>
         </div>
       </section>
 
-      <!-- ===================== 10 · SECURITY ===================== -->
-      <section class="slide" data-title="Security">
+      <!-- ===================== 8 · STATUS LIFECYCLE ===================== -->
+      <section class="slide" data-title="Status Tiket">
         <div class="slide-head">
           <div>
-            <div class="kicker reveal">06 — Security</div>
-            <h2 class="title reveal">Aman dari pengumpulan<br>sampai analisis AI.</h2>
-            <p class="lead reveal">Karena DEVTRACE membaca komunikasi aplikasi, keamanan diterapkan di setiap lapisan — bukan ditambahkan belakangan.</p>
+            <div class="kicker reveal">06 — Lifecycle</div>
+            <h2 class="title reveal">Siklus hidup tiket.<br>Transparan di setiap status.</h2>
+            <p class="lead reveal">Tujuh status; setiap perubahan memperbarui data tiket dan dicatat di timeline aktivitas.</p>
           </div>
         </div>
         <div class="slide-body">
-          <div class="sec-grid">
-            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>API token leak</div><p class="sec-fix">Automatic secret masking</p></article>
-            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>PII exposure</div><p class="sec-fix">PII redaction</p></article>
-            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Unauthorized access</div><p class="sec-fix">Authentication + RBAC</p></article>
-            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>API abuse</div><p class="sec-fix">Rate limiting + key rotation</p></article>
-            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Data interception</div><p class="sec-fix">HTTPS / TLS encryption</p></article>
-            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Event manipulation</div><p class="sec-fix">Input + schema validation</p></article>
-            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Prompt injection</div><p class="sec-fix">Logs treated as untrusted data</p></article>
-            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Source code leak</div><p class="sec-fix">Restricted upload + short retention</p></article>
-            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Unsafe fix suggestion</div><p class="sec-fix">Human review + isolated testing</p></article>
+          <div class="timeline">
+            <div class="tstep reveal"><span class="tnum">01</span><p><b>OPEN</b><br>Laporan baru dibuat</p></div>
+            <div class="tstep reveal"><span class="tnum">02</span><p><b>ASSIGNED</b><br>Tiket ditugaskan</p></div>
+            <div class="tstep reveal"><span class="tnum">03</span><p><b>IN PROGRESS</b><br>Sedang dikerjakan</p></div>
+            <div class="tstep reveal"><span class="tnum">04</span><p><b>WAITING FOR USER</b><br>Menunggu informasi</p></div>
+            <div class="tstep reveal"><span class="tnum">05</span><p><b>RESOLVED</b><br>Dinyatakan selesai</p></div>
+            <div class="tstep reveal"><span class="tnum">06</span><p><b>CLOSED</b><br>Tiket ditutup</p></div>
+            <div class="tstep reveal"><span class="tnum">07</span><p><b>REOPENED</b><br>Dibuka kembali</p></div>
           </div>
-          <div class="standards reveal">
-            <b>Acuan</b>
-            <em>OWASP ASVS</em>
-            <em>OWASP Top 10</em>
-            <em>OWASP Top 10 for LLM</em>
-            <em>Kebijakan PDP Indonesia</em>
+          <div class="limits-block reveal">
+            <div class="limits-title">Catatan transisi</div>
+            <div class="limits">
+              <span class="chip blue">RESOLVED → konfirmasi pelapor → CLOSED</span>
+              <span class="chip red">Masalah belum selesai → REOPENED</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ===================== 11 · KODE ===================== -->
-      <section class="slide" data-title="KODE">
+      <!-- ===================== 9 · MVP SCOPE ===================== -->
+      <section class="slide" data-title="Fitur MVP">
         <div class="slide-head">
           <div>
-            <div class="kicker reveal">Prinsip Perlombaan</div>
-            <h2 class="title reveal">KODE — nilai implementasi, bukan slogan.</h2>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="kode-grid">
-            <article class="kcard glass reveal" style="--accent:#0A84FF">
-              <span class="kletter">K</span>
-              <span class="kbar"></span>
-              <h3>Kolaboratif</h3>
-              <p>Frontend dan backend berbagi satu sumber informasi yang terpusat — bukan saling menebak.</p>
-            </article>
-            <article class="kcard glass reveal" style="--accent:#FF9F0A">
-              <span class="kletter">O</span>
-              <span class="kbar"></span>
-              <h3>Otomatisasi</h3>
-              <p>Pengumpulan, pengelompokan, dan analisis error berjalan otomatis — investigasi manual berkurang.</p>
-            </article>
-            <article class="kcard glass reveal" style="--accent:#BF5AF2">
-              <span class="kletter">D</span>
-              <span class="kbar"></span>
-              <h3>Data-Driven</h3>
-              <p>Analisis dan rekomendasi berdasar bukti: console, network, backend logs, dan stack trace.</p>
-            </article>
-            <article class="kcard glass reveal" style="--accent:#30D158">
-              <span class="kletter">E</span>
-              <span class="kbar"></span>
-              <h3>Efisien &amp; Etis</h3>
-              <p>Lebih cepat menyelesaikan masalah — tanpa mengorbankan keamanan, transparansi, dan kendali manusia.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== 12 · DIFFERENTIATORS ===================== -->
-      <section class="slide" data-title="Pembeda">
-        <div class="slide-head">
-          <div>
-            <div class="kicker reveal">Why It's Different</div>
-            <h2 class="title reveal">Tiga hal yang membedakan DEVTRACE.</h2>
-            <p class="lead reveal">Bukan sekadar dashboard monitoring — ada tiga proposisi inovasi yang jelas.</p>
+            <div class="kicker reveal">07 — MVP Scope</div>
+            <h2 class="title reveal">Cakupan MVP prototype.</h2>
+            <p class="lead reveal">Prioritas demo hackathon, fitur tambahan bila waktu cukup, dan batas yang jelas.</p>
           </div>
         </div>
         <div class="slide-body">
           <div class="diff-grid">
             <article class="diff glass reveal">
-              <span class="dnum">01</span>
-              <h3>Korelasi Frontend–Backend</h3>
-              <p>Satu Trace ID menyatukan error UI dengan exception backend. Ketika keduanya terhubung, akar masalah langsung terlihat.</p>
-              <span class="dquote">Tidak diberikan console atau APM biasa.</span>
+              <span class="dnum">Prioritas Wajib</span>
+              <h3>Harus ada saat demo</h3>
+              <ul class="role-list">
+                <li>Login demo &amp; pemilihan role</li>
+                <li>User dashboard &amp; form buat laporan</li>
+                <li>Daftar &amp; detail tiket</li>
+                <li>Automatic assignment sederhana</li>
+                <li>Developer dashboard &amp; update status</li>
+                <li>Admin dashboard seluruh tiket</li>
+                <li>Data demo via <code>localStorage</code> &amp; responsive</li>
+                <li>Production build berhasil</li>
+              </ul>
             </article>
             <article class="diff glass reveal">
-              <span class="dnum">02</span>
-              <h3>Diagnosis Berbasis Bukti</h3>
-              <p>AI menunjukkan bukti, asumsi, dan tingkat keyakinan — bukan jawaban kotak hitam yang harus dipercaya begitu saja.</p>
-              <span class="dquote">Bisa ditelusuri, bisa dipertanggungjawabkan.</span>
+              <span class="dnum">Tambahan</span>
+              <h3>Jika waktu mencukupi</h3>
+              <ul class="role-list">
+                <li>Embedded Report Issue (simulasi Examination)</li>
+                <li>Routing Rules Management</li>
+                <li>Notification Center</li>
+                <li>Audit Log</li>
+                <li>Grafik statistik sederhana</li>
+                <li>Upload lampiran dengan validasi dasar</li>
+              </ul>
             </article>
             <article class="diff glass reveal">
-              <span class="dnum">03</span>
-              <h3>Fix di Bawah Kendali Developer</h3>
-              <p>Rekomendasi, bukan auto-commit. Tidak ada perubahan kode yang terjadi tanpa persetujuan manusia.</p>
-              <span class="dquote">Cepat, tanpa kehilangan kendali.</span>
+              <span class="dnum">Di Luar Cakupan</span>
+              <h3>Bukan untuk prototype</h3>
+              <ul class="role-list">
+                <li>Integrasi UII SSO sebenarnya</li>
+                <li>Backend &amp; database internal UII</li>
+                <li>Integrasi production ke semua aplikasi</li>
+                <li>Email / notifikasi real-time</li>
+                <li>Engine assignment kompleks</li>
+                <li>SLA &amp; analytics lanjutan</li>
+              </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ===================== 13 · RECAP ===================== -->
-      <section class="slide" data-title="Recap">
+      <!-- ===================== 10 · TECH STACK ===================== -->
+      <section class="slide" data-title="Teknologi">
         <div class="slide-head">
           <div>
-            <div class="kicker reveal">Recap</div>
-            <h2 class="title reveal">Problem → Solution → Impact.</h2>
+            <div class="kicker reveal">08 — Stack</div>
+            <h2 class="title reveal">Stack prototype cepat.</h2>
+            <p class="lead reveal">Frontend-first, tanpa backend atau konfigurasi environment eksternal — cukup dibuka dan didemokan.</p>
+          </div>
+        </div>
+        <div class="slide-body">
+          <div class="tech-grid">
+            <article class="tech glass reveal"><span class="tech-k">Framework</span><h3>Next.js + React</h3><p>TypeScript, siap deploy.</p></article>
+            <article class="tech glass reveal"><span class="tech-k">Styling</span><h3>Tailwind CSS</h3><p>Utility-first, konsisten &amp; cepat.</p></article>
+            <article class="tech glass reveal"><span class="tech-k">UI Kit</span><h3>shadcn/ui</h3><p>Komponen reusable sejenis.</p></article>
+            <article class="tech glass reveal"><span class="tech-k">Icons</span><h3>Lucide React</h3><p>Ikon ringan dan konsisten.</p></article>
+            <article class="tech glass reveal"><span class="tech-k">Storage</span><h3>localStorage</h3><p>Data demo bertahan setelah refresh.</p></article>
+            <article class="tech glass reveal"><span class="tech-k">Deploy</span><h3>Vercel</h3><p>Publikasi cepat &amp; mudah.</p></article>
+          </div>
+          <div class="standards reveal">
+            <b>Prinsip</b>
+            <em>Tanpa backend</em>
+            <em>Tanpa env var eksternal</em>
+            <em>Data dummy realistis</em>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 11 · UI/UX ===================== -->
+      <section class="slide" data-title="UI/UX">
+        <div class="slide-head">
+          <div>
+            <div class="kicker reveal">09 — UI/UX</div>
+            <h2 class="title reveal">Enterprise, clean, jelas.</h2>
+            <p class="lead reveal">Tampilan produk mengikuti gaya sistem informasi institusi pendidikan — navy, light, dan mudah dipahami.</p>
+          </div>
+        </div>
+        <div class="slide-body">
+          <div class="gov-grid">
+            <div class="gov-table glass reveal">
+              <div class="gov-row"><span class="gov-k">Gaya</span><span class="gov-v">Professional enterprise dashboard; modern, clean, minimal.</span></div>
+              <div class="gov-row"><span class="gov-k">Layout</span><span class="gov-v">Sidebar navy, konten putih / light gray, card sederhana.</span></div>
+              <div class="gov-row"><span class="gov-k">Komponen</span><span class="gov-v">Tabel rapi dan status badge yang jelas.</span></div>
+              <div class="gov-row"><span class="gov-k">Responsif</span><span class="gov-v">Desktop, tablet, dan mobile.</span></div>
+              <div class="gov-row"><span class="gov-k">Bahasa</span><span class="gov-v">Bahasa antarmuka: Indonesia.</span></div>
+            </div>
+            <aside class="principles glass reveal">
+              <h3>Palet Warna Acuan</h3>
+              <div class="swatch-grid">
+                <div class="swatch"><i style="--sw:#142B4A"></i><span>Primary Navy</span><code>#142B4A</code></div>
+                <div class="swatch"><i style="--sw:#2563EB"></i><span>Primary Blue</span><code>#2563EB</code></div>
+                <div class="swatch"><i style="--sw:#EFF6FF"></i><span>Light Blue</span><code>#EFF6FF</code></div>
+                <div class="swatch"><i style="--sw:#F8FAFC"></i><span>Background</span><code>#F8FAFC</code></div>
+                <div class="swatch"><i style="--sw:#FFFFFF"></i><span>Surface</span><code>#FFFFFF</code></div>
+                <div class="swatch"><i style="--sw:#E2E8F0"></i><span>Border</span><code>#E2E8F0</code></div>
+                <div class="swatch"><i style="--sw:#1E293B"></i><span>Text Primary</span><code>#1E293B</code></div>
+                <div class="swatch"><i style="--sw:#64748B"></i><span>Text Secondary</span><code>#64748B</code></div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 12 · DATA MODEL ===================== -->
+      <section class="slide" data-title="Data &amp; Entitas">
+        <div class="slide-head">
+          <div>
+            <div class="kicker reveal">10 — Data Model</div>
+            <h2 class="title reveal">Entitas data konseptual.</h2>
+            <p class="lead reveal">Tiga belas entitas disiapkan untuk pengembangan; prototype menyimpannya di mock / <code>localStorage</code>.</p>
+          </div>
+        </div>
+        <div class="slide-body">
+          <div class="entity-grid reveal">
+            <span class="entity">users</span>
+            <span class="entity">applications</span>
+            <span class="entity">teams</span>
+            <span class="entity">team_members</span>
+            <span class="entity">categories</span>
+            <span class="entity">routing_rules</span>
+            <span class="entity">tickets</span>
+            <span class="entity">ticket_assignments</span>
+            <span class="entity">ticket_comments</span>
+            <span class="entity">ticket_attachments</span>
+            <span class="entity">ticket_status_histories</span>
+            <span class="entity">notifications</span>
+            <span class="entity">audit_logs</span>
+          </div>
+          <p class="flow-note reveal"><b>Production:</b> pindahkan ke backend &amp; database relational dengan kontrol akses server-side.</p>
+        </div>
+      </section>
+
+      <!-- ===================== 13 · SECURITY ===================== -->
+      <section class="slide" data-title="Keamanan">
+        <div class="slide-head">
+          <div>
+            <div class="kicker reveal">11 — Security</div>
+            <h2 class="title reveal">Keamanan &amp; governance<br>untuk production.</h2>
+            <p class="lead reveal">Prototype membatasi akses di sisi demo; production menerapkan kontrol di sisi server.</p>
+          </div>
+        </div>
+        <div class="slide-body">
+          <div class="sec-grid">
+            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Identity spoofing</div><p class="sec-fix">Verifikasi via UII SSO di server</p></article>
+            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Unauthorized access</div><p class="sec-fix">Role-Based Access Control</p></article>
+            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Client-trusted params</div><p class="sec-fix">Jangan percaya user_id/role dari browser</p></article>
+            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Fake source app</div><p class="sec-fix">Validasi lewat mekanisme integrasi</p></article>
+            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Internal note leak</div><p class="sec-fix">Pisahkan komentar publik &amp; internal</p></article>
+            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Malicious upload</div><p class="sec-fix">Validasi tipe, ukuran, isi file</p></article>
+            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Missing trace</div><p class="sec-fix">Audit trail aktivitas penting</p></article>
+            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Over-broad access</div><p class="sec-fix">Batasi akses tiket per role</p></article>
+            <article class="sec-card glass reveal"><div class="sec-threat"><i></i>Secret exposure</div><p class="sec-fix">Tanpa secret / service-role key di frontend</p></article>
+          </div>
+          <div class="standards reveal">
+            <b>Acuan</b>
+            <em>UII SSO</em>
+            <em>RBAC</em>
+            <em>HTTPS / TLS</em>
+            <em>Kebijakan PDP UII</em>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 14 · DEMO E2E ===================== -->
+      <section class="slide" data-title="Demo E2E">
+        <div class="slide-head">
+          <div>
+            <div class="kicker reveal">12 — Demo</div>
+            <h2 class="title reveal">Skenario demo end-to-end.</h2>
+            <p class="lead reveal">Lima alur yang dibuktikan saat demo.</p>
           </div>
         </div>
         <div class="slide-body">
           <div class="recap">
-            <div class="recap-row glass reveal">
-              <span class="rlabel">Problem</span>
-              <p>Debugging manual dengan informasi error yang tersebar di console, Network tab, dan backend logs.</p>
-              <span class="chip red">±4 jam investigasi</span>
-            </div>
-            <div class="recap-row glass reveal">
-              <span class="rlabel">Solution</span>
-              <p>Browser monitoring + korelasi frontend–backend + AI diagnosis dan rekomendasi yang bisa ditinjau.</p>
-              <span class="chip blue">1 platform</span>
-            </div>
-            <div class="recap-row glass reveal">
-              <span class="rlabel">Impact</span>
-              <p>Investigasi lebih cepat, kolaborasi lebih rapi, dan error terdokumentasi dengan langkah pencegahan.</p>
-              <span class="chip mint">−79,2% waktu*</span>
-            </div>
+            <div class="recap-row glass reveal"><span class="rlabel">Skenario 1</span><p>User membuat laporan untuk Examination, submit, lalu tunjukkan nomor tiket &amp; hasil assignment.</p><span class="chip blue">User</span></div>
+            <div class="recap-row glass reveal"><span class="rlabel">Skenario 2</span><p>Developer terkait membuka tiket, ubah ke IN PROGRESS, komentar, lalu RESOLVED.</p><span class="chip blue">Developer</span></div>
+            <div class="recap-row glass reveal"><span class="rlabel">Skenario 3</span><p>User kembali, buka tiket, dan tunjukkan status terbaru, komentar, dan timeline.</p><span class="chip blue">User</span></div>
+            <div class="recap-row glass reveal"><span class="rlabel">Skenario 4</span><p>Admin melihat seluruh tiket, distribusi, workload developer, dan Unassigned Queue.</p><span class="chip blue">Admin</span></div>
+            <div class="recap-row glass reveal"><span class="rlabel">Skenario 5</span><p>Embedded Report Issue di halaman simulasi Examination — aplikasi asal terisi otomatis.</p><span class="chip blue">Embedded</span></div>
           </div>
         </div>
       </section>
 
-      <!-- ===================== 14 · THANKS ===================== -->
-      <section class="slide center" data-title="Thanks">
-        <div class="center-wrap">
-          <div class="kicker reveal">Closing</div>
-          <h2 class="huge reveal">Thanks for your<br>attention.</h2>
-          <p class="center-sub reveal">Mari kita demokan sedikit.</p>
-          <p class="center-meta reveal">DEVTRACE AI · Tim Noer Maha Oke</p>
+      <!-- ===================== 15 · SCOPE & ROADMAP ===================== -->
+      <section class="slide" data-title="Batasan &amp; Rencana">
+        <div class="slide-head">
+          <div>
+            <div class="kicker reveal">13 — Scope &amp; Roadmap</div>
+            <h2 class="title reveal">Batasan prototype<br>&amp; rencana production.</h2>
+            <p class="lead reveal">Prototype membuktikan alur produk &amp; interaksi utama — bukan kesiapan production.</p>
+          </div>
+        </div>
+        <div class="slide-body">
+          <div class="impact-table left glass reveal">
+            <table>
+              <thead>
+                <tr><th>Area</th><th>Prototype</th><th>Production</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Login</td><td class="b">Demo role selector</td><td class="a">Integrasi UII SSO</td></tr>
+                <tr><td>Data</td><td class="b">localStorage / mock</td><td class="a">Backend &amp; database resmi</td></tr>
+                <tr><td>Embedded report</td><td class="b">Simulasi konteks</td><td class="a">Integrasi + validasi server-side</td></tr>
+                <tr><td>Assignment</td><td class="b">Routing sederhana</td><td class="a">Aturan operasional &amp; workload aktual</td></tr>
+                <tr><td>Notification</td><td class="b">In-app simulasi</td><td class="a">Notification service</td></tr>
+                <tr><td>Security</td><td class="b">Pembatasan demo</td><td class="a">RBAC &amp; kontrol server-side</td></tr>
+                <tr><td>Deployment</td><td class="b">Vercel</td><td class="a">Infrastruktur sesuai kebijakan UII</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
-      <!-- ===================== 15 · Q&A ===================== -->
+      <!-- ===================== 16 · SUCCESS METRICS ===================== -->
+      <section class="slide" data-title="Indikator">
+        <div class="slide-head">
+          <div>
+            <div class="kicker reveal">14 — Success Metrics</div>
+            <h2 class="title reveal">Indikator keberhasilan demo.</h2>
+            <p class="lead reveal">Prototype dianggap berhasil jika sepuluh kriteria berikut terpenuhi.</p>
+          </div>
+        </div>
+        <div class="slide-body">
+          <div class="check-grid reveal">
+            <div class="check-item"><i></i>Ketiga role dapat dicoba</div>
+            <div class="check-item"><i></i>User dapat membuat tiket</div>
+            <div class="check-item"><i></i>Nomor tiket terbentuk otomatis</div>
+            <div class="check-item"><i></i>Aplikasi asal tercatat</div>
+            <div class="check-item"><i></i>Assignment menghasilkan tim &amp; developer</div>
+            <div class="check-item"><i></i>Developer update status &amp; komentar</div>
+            <div class="check-item"><i></i>User melihat status &amp; timeline</div>
+            <div class="check-item"><i></i>Admin melihat seluruh tiket</div>
+            <div class="check-item"><i></i>Data demo bertahan setelah refresh</div>
+            <div class="check-item"><i></i>Build sukses &amp; akses via Vercel</div>
+          </div>
+          <div class="rootcause ok reveal">
+            <b>Ringkasan:</b> UII Application Support adalah platform ticketing terpusat yang menghubungkan pengguna aplikasi internal UII dengan tim developer melalui pelaporan terstruktur, automatic ticket assignment, dan pemantauan penyelesaian masalah secara transparan.
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 17 · THANKS ===================== -->
+      <section class="slide center" data-title="Thanks">
+        <div class="center-wrap">
+          <div class="kicker reveal">Closing</div>
+          <h2 class="huge reveal">Terima kasih atas<br>perhatiannya.</h2>
+          <p class="center-sub reveal">Mari kita demokan.</p>
+          <p class="center-meta reveal">UII Application Support · Tim Noer Maha Oke</p>
+        </div>
+      </section>
+
+      <!-- ===================== 18 · Q&A ===================== -->
       <section class="slide center" data-title="Q&amp;A">
         <div class="center-wrap">
           <div class="kicker reveal">Q &amp; A</div>
           <h2 class="huge reveal">Apakah ada pertanyaan?<span class="qa-caret"></span></h2>
-          <p class="center-sub reveal">See the Error. Understand the Cause. Fix It Smarter.</p>
-          <p class="center-meta reveal">DEVTRACE AI · Tim Noer Maha Oke</p>
+          <p class="center-sub reveal">Lapor Cepat. Terdistribusi Otomatis. Progres Transparan.</p>
+          <p class="center-meta reveal">UII Application Support · Tim Noer Maha Oke</p>
         </div>
       </section>
-
     </main>
 
     <!-- click zones -->
@@ -1904,10 +2006,10 @@ code{font-size:.92em}
 
     <!-- HUD -->
     <nav id="hud" aria-label="Kontrol presentasi">
-      <span class="hud-brand"><b>DEVTRACE AI</b> · NOER MAHA OKE</span>
+      <span class="hud-brand"><b>UII SUPPORT</b> · NOER MAHA OKE</span>
       <div class="dots" id="dots"></div>
       <div class="hud-right">
-        <span class="counter" id="counter">01 / 15</span>
+        <span class="counter" id="counter">01 / 18</span>
         <button class="icon-btn" id="fsBtn" type="button" title="Fullscreen (F)" aria-label="Toggle fullscreen">
           <svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
         </button>
